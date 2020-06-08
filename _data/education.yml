@@ -1,0 +1,16 @@
+
+# - institute:
+#   diploma:
+#   location:
+#   graduation_date:
+
+- institute: HARVARD UNIVERSITY
+  diploma: BSc Electrical Engineering with a secondary in Computer Science
+  location: Cambridge, MA
+  graduation_date: May 2020
+
+
+- institute: Utumishi Academy
+  diploma: High School
+  location: Gilgil, Kenya
+  graduation_date: November 2014

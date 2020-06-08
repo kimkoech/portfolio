@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+
+<div class="w3-twothird">
+           
+    <!--Intro-->
+    <div style="margin-top: 30px;"class="w3-container w3-card w3-white w3-margin-bottom">
+        <script>
+            $(function(){
+                $("#intro").typed({
+                    strings: ["Design Logic", "Tinker with Electronics", "Build processors"],
+                    startDelay: 30,
+                    typeSpeed: 40,
+                    backSpeed: 60,
+                    backDelay: 350,
+                    loop: true,
+                    contentType: 'html',
+                    loopCount: false
+                });
+        
+            });
+        </script>
+        <h2 class="w3-text-grey w3-padding-16">
+            <p>Hi &mdash; I'm Billy Koech. I like to</p>
+            <span id="intro"></span>
+        </h2>
+        
+        
+      </div>
+
+    <!-- Resume --> 
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+      <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+      
+      {% for job in site.data.work %}
+      <div class="w3-container">
+
+            <h5 style="float: left;" class="w3-opacity"><b>{{ job.company }}</b></h5>
+            <h6 style="float:right;"class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{ job.start }} - {{ job.end }} </h6>
+            <div style="clear: both;"></div>
+
+        <p>{{ job.title }}</p>
+        <p> {{ job.description }}</p>
+        <hr>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+      <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+      
+      {% for school in site.data.education %}
+      <div class="w3-container">
+        <h5 style="float: left;" w3-opacity"><b>{{ school.institute }}</b></h5>
+        <h6 style="float: right;" class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{school.graduation_date}}</h6>
+        <div style="clear: both;"></div>
+        <p>{{ school.diploma}}</p>
+        <hr>
+      </div>
+      {% endfor %}
+
+    <!-- End Resume --> 
+    </div>
+
+  <!-- End Right Column -->
+  </div>
