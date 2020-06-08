@@ -26,19 +26,19 @@
                 <div class="w3-container">
                 <!-- Profile -->
                 
-                  <!-- <p><i class="fa fa-toggle-off fa-fw w3-margin-right w3-large w3-text-teal"></i><button class="w3-button w3-round-xxlarge w3-black" onclick="toggleDarkMode()" >Dark Mode</button></p> -->
-                  <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ site.data.profile.profession }}</p>
-                  <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ site.data.profile.location }}</p>
-                  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ site.data.profile.email }}</p>
-                  <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>{{ site.data.profile.phone }}</p>
-                  <p><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="{{ site.data.profile.github }}">github.com/kimkoech</a></p>
-                  <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="{{ site.data.profile.linkedin }}">kimkoech</a></p>
+                  <!-- <p><i class="fa fa-toggle-off fa-fw w3-margin-right w3-large w3-text-{{ page.color_scheme }}"></i><button class="w3-button w3-round-xxlarge w3-black" onclick="toggleDarkMode()" >Dark Mode</button></p> -->
+                  <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-{{ page.color_scheme }}"></i>{{ site.data.profile.profession }}</p>
+                  <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-{{ page.color_scheme }}"></i>{{ site.data.profile.location }}</p>
+                  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-{{ page.color_scheme }}"></i>{{ site.data.profile.email }}</p>
+                  <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-{{ page.color_scheme }}"></i>{{ site.data.profile.phone }}</p>
+                  <p><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-{{ page.color_scheme }}"></i><a href="{{ site.data.profile.github }}">github.com/kimkoech</a></p>
+                  <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-{{ page.color_scheme }}"></i><a href="{{ site.data.profile.linkedin }}">kimkoech</a></p>
 
                   <hr>
                   <!-- End profile -->
 
                     <!-- Skills -->
-                  <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+                  <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-{{ page.color_scheme }}"></i>Skills</b></p>
 
                   {% for item in site.data.skills %}
                   <p> {{ item.name }}</p>
@@ -49,12 +49,12 @@
         
                 
                     <!-- Languages -->
-                  <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+                  <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-{{ page.color_scheme }}"></i>Languages</b></p>
                   
                   {% for item in site.data.languages %}
                   <p>{{ item.lang }}</p>
                   <div class="w3-light-grey w3-round-xlarge">
-                    <div class="w3-round-xlarge w3-teal" style="height:24px;width:{{ item.level }}%"></div>
+                    <div class="w3-round-xlarge w3-{{ page.color_scheme }}" style="height:24px;width:{{ item.level }}%"></div>
                   </div>
                   {% endfor %}
                   <!-- End languages -->

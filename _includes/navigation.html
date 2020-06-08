@@ -1,8 +1,8 @@
 <div class="w3-full">
     <div class="w3-top w3-bar w3-border w3-card-4 w3-light-grey w3-margin-bottom">
-        <a href="#" class="w3-bar-item w3-button" onclick="openTab('Home')" >Home</a>
-        <a href="#" class="w3-bar-item w3-button" onclick="openTab('Resume')" >Resume</a>
-        <a href="#" class="w3-bar-item w3-button" onclick="openTab('Projects')" >Projects</a>
+        <a href="#Home" class="w3-bar-item w3-button" onclick="openTab('Home')" >Home</a>
+        <a href="#Resume" class="w3-bar-item w3-button" onclick="openTab('Resume')" >Resume</a>
+        <a href="#Projects" class="w3-bar-item w3-button" onclick="openTab('Projects')" >Projects</a>
         <a href="#" class="w3-bar-item w3-button">Just the Docs</a>
       </div>
     </div>
@@ -13,6 +13,7 @@
         for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";  
         }
-        document.getElementById(tabName).style.display = "block";  
+        document.getElementById(tabName).style.display = "block";
+        document.getElementById(tabName).scrollIntoView();
     }
 </script>
