@@ -23,8 +23,8 @@ email: koechbillyk@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Billy Koech's, Electrical Eningeeirng, Harvard University SB 20 
   portfiolio website.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/portfolio" # the subpath of your site, e.g. /blog
+url: "kimkoech.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  kimkoech
 
 # Build settings
