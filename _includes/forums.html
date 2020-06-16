@@ -1,0 +1,56 @@
+<div class="w3-container w3-card w3-white w3-margin-bottom">
+    <div id="InterviewQuestionResult_2" 
+    style="-webkit-font-smoothing: antialiased;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    border-width: 0;
+    font-size: 15px;
+    color: #404040;
+    line-height: 15px;
+    border-bottom: 1px solid #c2c2c2;
+    padding: 16px 0;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+    box-sizing: border-box;" class="interviewQuestionWrapper padVertLg"><div class="interviewQuestion noPad "><div class="tbl fill"><div class="row"><div class="cell logo padRtLg hideHH"><a href="https://www.glassdoor.com/Interview/cpu-verification-interview-questions-SRCH_KO0,16.htm" class="sqLogoLink"><span class="sqLogo tighten smSqLogo"><img data-original="https://media.glassdoor.com/sqls/7834/arm-squarelogo-1554390712173.png" data-original-2x="https://media.glassdoor.com/sqlm/7834/arm-squarelogo-1554390712173.png" src="https://media.glassdoor.com/sqls/7834/arm-squarelogo-1554390712173.png" class="lazy lazy-loaded" data-retina-ok="true" alt="Arm Logo" title="" style="opacity: 1;"></span></a></div><div class="cell"><div class="tbl fill margBotSm"><div class="row"><h3 class="cell p"><span class="authorInfo"><a href="https://www.glassdoor.com/Interview/cpu-verification-interview-questions-SRCH_KO0,16.htm">CPU Verification at Arm was asked...</a></span></h3><div class="cell alignRt noWrap minor hideHH"> Dec 28, 2019</div></div></div><div class="question margTopSm"><table class="interviewQuestionText"><tbody><tr><td><p class="questionText h3"> Types of caches and which is better. How does the cache fetch a data from the main memory?</p><a class="userResponseLink margTop block hiddenLink mmLink " href="https://www.glassdoor.com/Interview/cpu-verification-interview-questions-SRCH_KO0,16.htm">2 Answers<i class="caret-blue margLtSm rotate180"></i></a><div class="userResponses margTopLg borderTop"><div class="responseText padTopSm tbl fill"><p class="cell noMargVert padVert borderBot">Response to the first part: The fundamental types of caches are direct-mapped cache, set-associative cache and fully associative cache. The question of "the best" type of cache is dependent on the objective and there are trade-offs: a small direct-mapped cache is the fastest scheme but it also exhibits the highest miss rate and is prone to conflict misses. A set-associative cache alleviates conflict misses, and the miss rate scales down with an increase in the number of sets; however, the higher the number of sets, the larger the latency for retrieving words i.e. high hit time. A fully associative cache has the lowest miss rate but the highest hit time.</p></div><div class="responseText padTopSm tbl fill"><p class="cell noMargVert padTop tightBot">How the cache fetches data from main memory: In the event of a read miss or write miss, the cache fetches cache lines from either the next cache level or from main memory using the address of the word. The cache line could be a single word or multiple words depending on the type of cache. A multiword cache line would leverage spatial locality to decrease the miss rate.</p></div></div></td></tr></tbody></table></div></div></div></div></div></div>
+  </div>
+
+  <div class="w3-container w3-card w3-white w3-margin-bottom">
+  <div id="InterviewQuestionResult_2" 
+  style="-webkit-font-smoothing: antialiased;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  border-width: 0;
+  font-size: 15px;
+  color: #404040;
+  line-height: 15px;
+  border-bottom: 1px solid #c2c2c2;
+  padding: 16px 0;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+  box-sizing: border-box;"
+  class="interviewQuestionWrapper padVertLg"><div class="interviewQuestion noPad "><div class="tbl fill"><div class="row"><div class="cell logo padRtLg hideHH"><a href="https://www.glassdoor.com/Interview/cpu-verification-interview-questions-SRCH_KO0,16.htm" class="sqLogoLink"><span class="sqLogo tighten smSqLogo"><img data-original="https://media.glassdoor.com/sqls/7834/arm-squarelogo-1554390712173.png" data-original-2x="https://media.glassdoor.com/sqlm/7834/arm-squarelogo-1554390712173.png" src="https://media.glassdoor.com/sqls/7834/arm-squarelogo-1554390712173.png" class="lazy lazy-loaded" data-retina-ok="true" alt="Arm Logo" title="" style="opacity: 1;"></span></a></div><div class="cell"><div class="tbl fill margBotSm"><div class="row"><h3 class="cell p"><span class="authorInfo"><a href="https://www.glassdoor.com/Interview/cpu-verification-interview-questions-SRCH_KO0,16.htm">CPU Verification at Arm was asked...</a></span></h3><div class="cell alignRt noWrap minor hideHH"> Dec 28, 2019</div></div></div><div class="question margTopSm"><table class="interviewQuestionText"><tbody><tr><td><p class="questionText h3"> General questions about OOE.</p><a class="userResponseLink margTop block hiddenLink mmLink " href="/Interview/General-questions-about-OOE-QTN_3590838.htm">1 Answer<i class="caret-blue margLtSm rotate180"></i></a><div class="userResponses margTopLg borderTop hidden" style="display: block;"><div class="responseText padTopSm tbl fill"><p class="cell noMargVert padTop tightBot">Out of Order Execution is implemented in modern computing using Tomasulo's algorithm. Prior to Tomasulo, the CDC 6600(1964) used scoreboarding which involved keeping track of the stages of the instructions, the availability of the functional units and the readiness of the registers. It allowed for OOE but it was susceptible to false data hazards(WAW and WAR). Tomasulo solved this false data hazard issue by introducing register renaming using reservation stations which essentially allowed for instruction results to be held in the reservation stations and to be forwarded directly to other instructions through a common data bus. Therefore in the case of a WAR hazard, a younger instruction could just write to a register instead of waiting for an older instruction to read from it because the value needed by the younger instruction would be in the reservation station.</p></div></div></td></tr></tbody></table></div></div></div></div></div></div>
+  </div>
+
+  <div class="w3-container w3-card w3-white w3-margin-bottom">
+  <div id="InterviewQuestionResult_4" 
+  style="-webkit-font-smoothing: antialiased;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  border-width: 0;
+  font-size: 15px;
+  color: #404040;
+  line-height: 15px;
+  border-bottom: 1px solid #c2c2c2;
+  padding: 16px 0;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+  box-sizing: border-box;"
+  class="interviewQuestionWrapper padVertLg"><div class="interviewQuestion noPad "><div class="tbl fill"><div class="row"><div class="cell logo padRtLg hideHH"><a href="https://www.glassdoor.com/Interview/cpu-verification-interview-questions-SRCH_KO0,16.htm" class="sqLogoLink"><span class="sqLogo tighten smSqLogo"><img data-original="https://media.glassdoor.com/sqls/7834/arm-squarelogo-1554390712173.png" data-original-2x="https://media.glassdoor.com/sqlm/7834/arm-squarelogo-1554390712173.png" src="https://media.glassdoor.com/sqls/7834/arm-squarelogo-1554390712173.png" class="lazy lazy-loaded" data-retina-ok="true" alt="Arm Logo" title="" style="opacity: 1;"></span></a></div><div class="cell"><div class="tbl fill margBotSm"><div class="row"><h3 class="cell p"><span class="authorInfo"><a href="https://www.glassdoor.com/Interview/cpu-verification-interview-questions-SRCH_KO0,16.htm">CPU Verification at Arm was asked...</a></span></h3><div class="cell alignRt noWrap minor hideHH"> Dec 28, 2019</div></div></div><div class="question margTopSm"><table class="interviewQuestionText"><tbody><tr><td><p class="questionText h3"> What are the hazards in a pipelined processors and how to rectify them?</p><a class="userResponseLink margTop block hiddenLink mmLink " href="https://www.glassdoor.com/Interview/cpu-verification-interview-questions-SRCH_KO0,16.htm">1 Answer<i class="caret-blue margLtSm rotate180"></i></a><div class="userResponses margTopLg borderTop hidden" style="display: block;"><div class="responseText padTopSm tbl fill"><p class="cell noMargVert padTop tightBot">harzard: solution data hazard: static and dynamic scheduling(Tomasulo's algorithm - register renaming gets rid of false hazards ie WAR WAW). Stall for RAW hazards or forward/bypass. structural hazard: increase the number of resources i.e. have duplicate functional units to allow for simultaneous execution of similar arithmetic operations. Use the Harvard memory architecture as opposed to the Von Neumann one to allow for simultaneous I and D mem access etc. control hazard: Use static and dynamic branch predictors scheme to execute branches before they are resolved. Two-level branch prediction schemes seem to be particularly common.</p></div></div></td></tr></tbody></table></div></div></div></div></div></div>
+    </div>
+

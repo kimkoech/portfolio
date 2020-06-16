@@ -5,8 +5,11 @@ layout: default
 
 <div class="w3-twothird">
            
-    <!--Intro-->
+    
+    <!-- Home wrapper -->
     <div id="Home" class="maincontent w3-animate-top">
+
+    <!--Intro-->
     <div style="margin-top: 30px;"class="w3-container w3-card w3-white w3-margin-bottom">
         <script>
             $(function(){
@@ -30,12 +33,64 @@ layout: default
         
     <!--End Intro-->
     </div>
+    
+
+
+    <!--NEWS-->
+    <div id="News">
+      <div style="margin-top: 30px;" class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-newspaper-o fa-fw
+          w3-margin-right w3-xxlarge w3-text-{{ page.color_scheme }}"></i>Recent
+          News and Features</h2>
+          
+      <!--End NEWS-->
+      </div>
+      </div>
+
+
+
+
+      <!-- News card -->
+      <!-- The Grid -->
+    <div class="w3-row-padding w3-animate-top">
+
+    {% include forums.html %}
+    
+    {% for article in site.data.news %}
+    {% if article.embed != '' %}
+    <div class="w3-third" style="width: inherit;">
+      <div class="w3-card-4" >
+      {{ article.embed }}
+      </div>
+    </div>
+    {% else %}
+    <div class="w3-third">
+      <div class="w3-card-4">
+        <img src="{{ site.baseurl}} /assets/images/news/news1.png" alt="Alps" style="width: 100%">
+        <div class="w3-container w3-center">
+          <p>The Italian / Austrian Alps</p>
+        </div>
+      </div>
+      </div>
+    {% endif %}
+
+    {% endfor %}
+    
+
+
+  <!-- End news grid -->
     </div>
 
+    <!-- End home wrapper -->
+  </div>
+
+
+     
+
     <!--Projects-->
-    <div id="Projects" class="maincontent w3-animate-top">
+    <div id="Projects" style="display: none;" class="maincontent w3-animate-top">
     <div style="margin-top: 30px;" class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-{{ page.color_scheme }}"></i>Projects</h2>
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-microchip fa-fw w3-margin-right w3-xxlarge w3-text-{{ page.color_scheme }}"></i>Projects</h2>
       
       {% for project in site.data.projects %}
       <div class="w3-container">
@@ -54,8 +109,10 @@ layout: default
     </div>
     </div>
 
+    
+
     <!-- Resume --> 
-    <div id="Resume" class="maincontent w3-animate-top">
+    <div id="Resume" style="display: none;" class="maincontent w3-animate-top">
     <div style="margin-top: 30px;" class="w3-container w3-card w3-white w3-margin-bottom">
       <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-{{ page.color_scheme }}"></i>Work Experience</h2>
       
@@ -63,10 +120,10 @@ layout: default
       <div class="w3-container">
 
             <h5 style="float: left;" class="w3-opacity"><b>{{ job.company }}</b></h5>
-            <h6 style="float:right;"class="w3-text-{{ page.color_scheme }}"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{ job.start }} - {{ job.end }} </h6>
+            <h6 style="float:right;">{{ job.start }} - {{ job.end }} </h6>
             <div style="clear: both;"></div>
 
-        <p>{{ job.title }}</p>
+        <p class="w3-text-{{ page.color_scheme }}" >{{ job.title }}</p>
         <p> {{ job.description }}</p>
         <hr>
       </div>
@@ -74,12 +131,12 @@ layout: default
     </div>
 
     <div class="w3-container w3-card w3-white w3-margin-bottom">
-      <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-{{ page.color_scheme }}"></i>Education</h2>
+      <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-{{ page.color_scheme }}"></i>Education</h2>
       
       {% for school in site.data.education %}
       <div class="w3-container">
         <h5 style="float: left;" w3-opacity"><b>{{ school.institute }}</b></h5>
-        <h6 style="float: right;" class="w3-text-{{ page.color_scheme }}"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{school.graduation_date}}</h6>
+        <h6 style="float: right;" class="w3-text-{{ page.color_scheme }}">{{school.graduation_date}}</h6>
         <div style="clear: both;"></div>
         <p>{{ school.diploma}}</p>
         <hr>
@@ -92,3 +149,4 @@ layout: default
 
   <!-- End Right Column -->
   </div>
+
