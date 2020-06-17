@@ -28,16 +28,18 @@
             elements[i].classList.toggle("dark-mode");
         }
 
-        // // all paragraphs
+        //Nav bar
+        var nav = document.getElementsByClassName("w3-top");
+        nav[0].classList.toggle("dark-mode");
+
+        // all paragraphs [this section break so it should happen last]
         var paragraphs = document.getElementsByTagName("P");
         var j;
         for(j=0; i<paragraphs.length; j++){
             paragraphs[j].classList.toggle("dark-mode");
         }
 
-        //Nav bar
-        var nav = document.getElementsByClassName("w3-top");
-        nav[0].classList.toggle("dark-mode");
+        
         
        
     }
